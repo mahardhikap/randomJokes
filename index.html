@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke</title>
+</head>
+<style>
+    
+    #isiJoke .kotakJoke{
+        border: 1px solid black;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 20px;
+        height: 450px;
+        overflow: auto;
+        border-radius: 15px;
+    }
+    #isiJoke .kotakJoke #listJoke li{
+        list-style-type: number;
+    }
+    #isiJoke .kotakJoke #listJoke{
+        /* padding: 0; */
+        margin: 0;
+    }
+    .button-wrapper{
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="isiJoke">
+        <div class="kotakJoke">
+            <ul id="listJoke">
+            </ul>
+        </div>
+        <div class="button-wrapper">
+            <button onclick="reset()">Reset</button>
+            <button onclick="addRandomJoke()">Random Joke</button>
+        </div>
+    </div>
+    <script src="dadJoke.js"></script>
+    <script>
+        const reset = () => {
+            localStorage.removeItem('jokes')
+            location.reload()
+            alert('List joke direset!')
+        }
+
+        const addRandomJoke = () => {
+            location.reload()
+        }
+    </script>
+</body>
+</html>
